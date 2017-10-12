@@ -89,20 +89,16 @@ class AyundaBot < Sinatra::Application
     'Perahu Kertas ku kan melaju~'
   end
 
-  # Sinatra~
-  if app_file == $0
-    Thread.start do
-      begin
-        Telegram::Bot::Client.run(ENV['BOT_TOKEN']) do |bot|
-          bot.listen do |message|
-            MessageResponder.perform_async(message, bot)
-          end
+  Thread.start do
+    begin
+      Telegram::Bot::Client.run(ENV['BOT_TOKEN']) do |bot|
+        bot.listen do |message|
+          MessageResponder.perform_async(message, bot)
         end
-      rescue StandardError
-        retry
       end
+    rescue StandardError
+      retry
     end
-
-    run!
   end
+
 end
