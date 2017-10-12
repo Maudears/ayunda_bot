@@ -85,6 +85,10 @@ class AyundaBot < Sinatra::Application
     MessageSender.send(message)
   end
 
+  get '/' do
+    'Perahu Kertas ku kan melaju~'
+  end
+
   # Sinatra~
   if app_file == $0
     Thread.start do

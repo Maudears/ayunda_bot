@@ -8,6 +8,7 @@ class MessageResponder
     @bot = bot
 
     return unless message
+    return unless message.text
 
     text = message.text.sub(ENV['BOT_USERNAME'], '')
     case text
