@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'dotenv'
+gem 'thin'
+gem 'faraday'
+gem 'telegram-bot-ruby'
+gem 'sucker_punch', '~> 2.0'
+gem 'whenever'
+gem 'activerecord'
+gem 'rake'
+gem 'mysql2'
+gem 'rmagick'
+gem 'word_wrap'
+
