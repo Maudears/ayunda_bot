@@ -16,14 +16,14 @@ class MessageResponder
       if is_admin?(message)
         text = 'Halo sayangku ' << message.from.first_name << ' 😍'
       else
-        text = 'Apaan sih! Kamu bukan Julio! 😡'
+        text = 'Apaan sih! Kamu bukan admin! 😡'
       end
       reply(message, text)
     when '/kiss'
       if is_admin?(message)
         text = '💋💋💋'
       else
-        text = 'Apaan sih! Kamu bukan Julio! 😡'
+        text = 'Apaan sih! Kamu bukan admin! 😡'
       end
       reply(message, text)
     when '/love'
