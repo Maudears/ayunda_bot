@@ -26,6 +26,11 @@ class MessageResponder
         text = 'Apaan sih! Kamu bukan Julio! 😡'
       end
       reply(message, text)
+    when '/love'
+      if is_admin?(message)
+        text = '💕💕💕'
+      else
+        text = '💕'
     when '/help'
       text = 'Halo! Bot ini sedang dalam tahap pengembangan, jika ada kritik dan saran, silakan kirim ke @jsavigny'
       reply(message, text)
