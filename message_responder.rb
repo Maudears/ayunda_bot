@@ -19,6 +19,9 @@ class MessageResponder
         text = 'Apaan sih! Kamu bukan admin! 😡'
       end
       reply(message, text)
+    when '/high'
+      text = '나를 좀 더 데려가 줘!'
+      reply(message, text)
     when '/kiss'
       if is_admin?(message)
         text = '💋💋💋'
@@ -31,6 +34,8 @@ class MessageResponder
         text = '💕💕💕'
       else
         text = '💕'
+      end
+      reply(message, text)
     when '/help'
       text = 'Halo! Bot ini sedang dalam tahap pengembangan, jika ada kritik dan saran, silakan kirim ke @jsavigny'
       reply(message, text)
