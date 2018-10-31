@@ -22,7 +22,7 @@ load 'employee.rb'
 
 class AyundaBot < Sinatra::Application
   set :server, :thin
-  set :port, 8443
+  set :port, 8969
   set :bind, '0.0.0.0'
 
   def self.admins
