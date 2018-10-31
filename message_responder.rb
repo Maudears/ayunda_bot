@@ -22,6 +22,9 @@ class MessageResponder
     when '/high'
       text = '나를 좀 더 데려가 줘!'
       reply(message, text)
+    when '/banana'
+      text = 'Let\'s Power Up!'
+      reply(message, text)
     when '/kiss'
       if is_admin?(message)
         text = '💋💋💋'
