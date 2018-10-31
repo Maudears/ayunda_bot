@@ -19,7 +19,7 @@ class MessageSender
             results = bot.api.send_message(options)
             sleep(0.1)
           rescue Faraday::TimeoutError, Faraday::ConnectionFailed => e
-            sleep(1.3)
+            sleep(1.0)
             retry
           rescue Telegram::Bot::Exceptions::ResponseError => e
             if e.message =~ /error_code: .429./
