@@ -36,6 +36,9 @@ class MessageResponder
         text = '💕'
       end
       reply(message, text)
+    when '/thank_you'
+      text = 'You\'re Welcome!'
+      reply(message, text)
     when '/help'
       text = 'Halo! Bot ini sedang dalam tahap pengembangan, jika ada kritik dan saran, silakan kirim ke @jsavigny'
       reply(message, text)
